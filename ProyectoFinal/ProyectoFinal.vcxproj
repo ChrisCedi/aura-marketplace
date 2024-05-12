@@ -25,7 +25,7 @@
     <ClInclude Include="Shader.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="317097742_PROYECTOFINAL_GPO7.cpp" />
+    <ClCompile Include="317097742_PROYECTOFINAL_GPO3.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Shaders\anim.frag" />

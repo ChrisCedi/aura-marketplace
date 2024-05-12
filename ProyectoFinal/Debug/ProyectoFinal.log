@@ -1,15 +1,14 @@
-﻿  317097742_PROYECTOFINAL_GPO7.cpp
-C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO7.cpp(269,24): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO7.cpp(891,90): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO7.cpp(902,90): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO7.cpp(915,90): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO7.cpp(927,90): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO7.cpp(936,16): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO7.cpp(1285,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO7.cpp(1286,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO7.cpp(1290,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO7.cpp(1291,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO7.cpp(1293,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO7.cpp(1294,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-soil2-debug.lib(image_DXT.obj) : warning LNK4099: no se encontró PDB '' con 'soil2-debug.lib(image_DXT.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+﻿  317097742_PROYECTOFINAL_GPO3.cpp
+C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO3.cpp(272,24): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO3.cpp(920,90): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO3.cpp(931,90): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO3.cpp(944,90): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO3.cpp(956,90): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO3.cpp(965,16): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO3.cpp(1314,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO3.cpp(1315,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO3.cpp(1319,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO3.cpp(1320,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO3.cpp(1322,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO3.cpp(1323,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
   ProyectoFinal.vcxproj -> C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\Debug\ProyectoFinal.exe
