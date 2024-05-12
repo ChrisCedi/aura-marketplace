@@ -1,0 +1,68 @@
+newmtl cfdb0b16fad_tree__3d_asset_0_gl3:GenTree_105_AE3D_03122023_F2:Material_009___TWIGS
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.40 0.40 0.40
+Tf 1.00 1.00 1.00
+map_Kd GenTree_1_Twigs_AE3D_03312023-A-DIFFUSE.png
+Ni 1.45
+Ks 0.00 0.00 0.00
+Ns 0.06
+newmtl cfdb0b16fad_tree__3d_asset_0_gl3:GenTree_105_AE3D_03122023_F2:free_palm:fern_tree:Fern_Tree_texture
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd fern_tree_diffuse.png
+map_Ka fern_tree_diffuse.png
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 10.00
+newmtl cfdb0b16fad_tree__3d_asset_0_gl3:GenTree_105_AE3D_03122023_F2:lambert1SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd tree-texture.png
+Ni 1.00
+newmtl cfdb0b16fad_tree__3d_asset_0_gl3:GenTree_105_AE3D_03122023_F2:lambert2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd tree-texture.png
+Ni 1.00
+newmtl cfdb0b16fad_tree__3d_asset_0_gl3:lambert3SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd floor-texture.png
+Ni 1.00
+newmtl cfdb0b16fad_tree__3d_asset_0_gl3:lambert4SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd madera-maceta.png
+Ni 1.00
+newmtl cfdb0b16fad_tree__3d_asset_0_gl3:lambert5SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd tierra-texture.png
+Ni 1.00
+newmtl cfdb0b16fad_tree__3d_asset_0_gl3:lambert6SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd treeeeeeeeeeee.png
+Ni 1.00
+newmtl cfdb0b16fad_tree__3d_asset_0_gl3:lambert7SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd tree-texture.png
+Ni 1.00
