@@ -255,6 +255,7 @@ int main()
 
 	//exteriores
 	Model FloorExterior((char*)"Models/floorExterior/floorExterior.obj");
+	Model TreeExterior((char*)"Models/treeExterior/TreeExterior.obj");
 
 
 	
@@ -491,13 +492,62 @@ int main()
 		CafeteriaFachada.Draw(lightingShader);
 
 		//---------------------------------------------------------------------------------
-		//---------------------Carga de exteriores--------------------------------
+		//---------------------Carga de exteriores-----------------------------------------
 		//---------------------------------------------------------------------------------
 		model = glm::mat4(1);
 		model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f));
 		model = glm::scale(model, glm::vec3(7.8f, 7.8f, 7.8f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		FloorExterior.Draw(lightingShader);
+
+		//arboles---------------------------------------------------------
+
+		//derechos
+		// Distribución horizontal entre (30, 0, 40) y (40, 0, 40)
+		for (float x = 10.0f; x <= 70.0f; x += 15.0f) { // Ajusta el incremento para más/menos densidad
+			model = glm::mat4(1);
+			model = glm::translate(model, glm::vec3(x, 0.0f, -25.0f));
+			model = glm::scale(model, glm::vec3(5.8f, 6.8f, 5.8f));
+			glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+			TreeExterior.Draw(lightingShader);
+		}
+	
+		for (float x = -10.0f; x >= -70.0f; x -= 15.0f) { // Ajusta el incremento para más/menos densidad
+			model = glm::mat4(1);
+			model = glm::translate(model, glm::vec3(x, 0.0f, -25.0f));
+			model = glm::scale(model, glm::vec3(5.8f, 6.8f, 5.8f));
+			glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+			TreeExterior.Draw(lightingShader);
+		}
+
+		for (float z = 5.0f; z <= 80.0f; z += 15.0f) { // Ajusta el incremento para más/menos densidad
+			model = glm::mat4(1);
+			model = glm::translate(model, glm::vec3(70, 0.0f, z));
+			model = glm::scale(model, glm::vec3(5.8f, 6.8f, 5.8f));
+			glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+			TreeExterior.Draw(lightingShader);
+		}
+
+		for (float z = 5.0f; z <= 80.0f; z += 15.0f) { // Ajusta el incremento para más/menos densidad
+			model = glm::mat4(1);
+			model = glm::translate(model, glm::vec3(-70, 0.0f, z));
+			model = glm::scale(model, glm::vec3(5.8f, 6.8f, 5.8f));
+			glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+			TreeExterior.Draw(lightingShader);
+		}
+		
+
+	
+
+		
+
+
+		//izquierdos
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-50.0f, 0.0f, -16.0f));
+		//model = glm::scale(model, glm::vec3(7.8f, 7.8f, 7.8f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		TreeExterior.Draw(lightingShader);
 
 
 		//---------------------------------------------------------------------------------
