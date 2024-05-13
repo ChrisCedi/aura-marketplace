@@ -80,6 +80,9 @@ bool r4 = false;
 bool r5 = false;
 glm::vec3 lightDron = glm::vec3(0);
 glm::vec3 lightColorDron;
+//variables cafeteria
+bool openCafe = false;
+float puertaCafeValue = 0.0f;
 
 
 // Positions of the point lights
@@ -238,7 +241,20 @@ int main()
 	Model Helice((char*)"Models/dron/helices/helice.obj");
 
 	//cafeteria
+	
 	Model CafeteriaFachada((char*)"Models/cafeteria/fachada/fachada.obj");
+	Model CafeCristal((char*)"Models/cafeteria/fachada/cristal/cristal.obj");
+	Model CafeDoor((char*)"Models/cafeteria/door/door.obj");
+	Model Silla((char*)"Models/cafeteria/chair/chair.obj");
+	Model LogoCafe((char*)"Models/cafeteria/logo/logo.obj");
+	Model TableCafe((char*)"Models/cafeteria/table/table.obj");
+	Model MesaCobro((char*)"Models/cafeteria/mesaCobro/mesaCobro.obj");
+	Model Postres((char*)"Models/cafeteria/refri/refri.obj");
+	Model CritalRefri((char*)"Models/cafeteria/refri/refriCristal/refriCristal.obj");
+
+
+	//exteriores
+	Model FloorExterior((char*)"Models/floorExterior/floorExterior.obj");
 
 
 	
@@ -467,11 +483,22 @@ int main()
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		Fachada.Draw(lightingShader);
 
+		//cristal cafeteria
 		model = glm::mat4(1);
 		model = glm::translate(model, glm::vec3(-50.0f, 0.0f, 50.0f));
 		model = glm::scale(model, glm::vec3(2.9f, 2.5f, 2.9f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		CafeteriaFachada.Draw(lightingShader);
+
+		//---------------------------------------------------------------------------------
+		//---------------------Carga de exteriores--------------------------------
+		//---------------------------------------------------------------------------------
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(7.8f, 7.8f, 7.8f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		FloorExterior.Draw(lightingShader);
+
 
 		//---------------------------------------------------------------------------------
 		//---------------------Carga de objetos Apple store--------------------------------
@@ -482,6 +509,8 @@ int main()
 		model = glm::scale(model, glm::vec3(1.8f, 1.8f, 1.8f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		ScreenStore.Draw(lightingShader);
+
+		
 		//cuerpo de foco -----------------------------------------------
 		model = glm::mat4(1);
 		model = glm::translate(model, glm::vec3(-10.0f, 15.0f, 10.0f));
@@ -897,13 +926,152 @@ int main()
 		//---------------------Carga de objetos Cafeteria----------------------------------
 		//---------------------------------------------------------------------------------
 
-		//mesa lateral
+		//mesa lateral--------------------------------------------
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(-51.0f, 0.0f, 36.65f));
+		model = glm::translate(model, glm::vec3(-51.5f, 0.0f, 36.65f));
 		model = glm::scale(model, glm::vec3(2.0f, 1.3f, 1.0f));
 		model = glm::rotate(model, glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		Table.Draw(lightingShader);
+		//Decoracion---------------------------------------------
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-73.0f, -4.5f, 25.65f));
+		model = glm::scale(model, glm::vec3(2.9f, 2.9f, 2.9f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		LogoCafe.Draw(lightingShader);
+
+		//sillas-------------------------------------------------
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-47.5f, 0.0f, 38.80f));
+		model = glm::scale(model, glm::vec3(3.5f, 3.8f, 3.5f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		Silla.Draw(lightingShader);
+
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-50.5f, 0.0f, 38.80f));
+		model = glm::scale(model, glm::vec3(3.5f, 3.8f, 3.5f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		Silla.Draw(lightingShader);
+
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-53.6f, 0.0f, 38.80f));
+		model = glm::scale(model, glm::vec3(3.5f, 3.8f, 3.5f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		Silla.Draw(lightingShader);
+
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-56.6f, 0.0f, 38.80f));
+		model = glm::scale(model, glm::vec3(3.5f, 3.8f, 3.5f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		Silla.Draw(lightingShader);
+
+		//mesa de cobro -----------------------------------------------------------
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-57.0f, 0.0f, 57.80f));
+		model = glm::scale(model, glm::vec3(3.0f, 4.0f, 3.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		MesaCobro.Draw(lightingShader);
+
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-57.0f, 4.0f, 53.80f));
+		model = glm::scale(model, glm::vec3(1.3f, 1.3f, 1.3f));
+		model = glm::rotate(model, glm::radians(180.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		LaptopTapa.Draw(lightingShader);
+
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-57.0f, 4.0f, 53.80f));
+		model = glm::scale(model, glm::vec3(1.3f, 1.3f, 1.3f));
+		model = glm::rotate(model, glm::radians(180.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		LaptopTeclado.Draw(lightingShader);
+
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-57.0f, 4.2f, 55.80f));
+		model = glm::scale(model, glm::vec3(5.0f, 4.6f, 5.0f));
+		model = glm::rotate(model, glm::radians(-90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		CajaR.Draw(lightingShader);
+
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-57.0f, 4.2f, 55.80f));
+		model = glm::scale(model, glm::vec3(5.0f, 4.6f, 5.0f));
+		model = glm::rotate(model, glm::radians(-90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		model = glm::translate(model, glm::vec3(0.0f, 0.0f, cashRegister));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		Cajon.Draw(lightingShader);
+
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-57.0f, 3.0f, 57.80f));
+		model = glm::scale(model, glm::vec3(3.0f, 1.0f, 4.5f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		Postres.Draw(lightingShader);
+
+	
+
+		//mesas pequeñas y sillas---------------------------------------------------
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-47.0f, 0.0f, 56.80f));
+		model = glm::scale(model, glm::vec3(3.0f, 4.0f, 3.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		TableCafe.Draw(lightingShader);
+
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-47.9f, 2.9f, 56.80f));
+		model = glm::scale(model, glm::vec3(1.3f, 1.3f, 1.3f));
+		model = glm::rotate(model, glm::radians(180.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		LaptopTapa.Draw(lightingShader);
+
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-47.9f, 2.9f, 56.80f));
+		model = glm::scale(model, glm::vec3(1.3f, 1.3f, 1.3f));
+		model = glm::rotate(model, glm::radians(180.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		LaptopTeclado.Draw(lightingShader);
+
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-44.6f, 0.0f, 56.80f));
+		model = glm::scale(model, glm::vec3(3.5f, 3.8f, 3.5f));
+		model = glm::rotate(model, glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		Silla.Draw(lightingShader);
+
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-49.0f, 0.0f, 56.80f));
+		model = glm::scale(model, glm::vec3(3.5f, 3.8f, 3.5f));
+		model = glm::rotate(model, glm::radians(270.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		Silla.Draw(lightingShader);
+
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-47.0f, 0.0f, 62.00f));
+		model = glm::scale(model, glm::vec3(3.0f, 4.0f, 3.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		TableCafe.Draw(lightingShader);
+
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-44.6f, 0.0f, 62.00f));
+		model = glm::scale(model, glm::vec3(3.5f, 3.8f, 3.5f));
+		model = glm::rotate(model, glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		Silla.Draw(lightingShader);
+
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-49.0f, 0.0f, 62.00f));
+		model = glm::scale(model, glm::vec3(3.5f, 3.8f, 3.5f));
+		model = glm::rotate(model, glm::radians(270.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		Silla.Draw(lightingShader);
+
+
+		//planta-------------------------------------------------
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-42.0f, 0.1f, 36.65f));
+		model = glm::scale(model, glm::vec3(3.8f, 3.8f, 3.8f));
+		model = glm::rotate(model, glm::radians(20.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		Tree.Draw(lightingShader);
 
 		//---------------------------------------------------------------------------------
 		//------------------------Carga de cristales---------------------------------------
@@ -933,6 +1101,42 @@ int main()
 		glDisable(GL_BLEND);
 
 		//puertas------------------------------------------------------------------------------------
+
+		
+
+		glEnable(GL_BLEND);
+		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-57.0f, 1.0f, 57.80f));
+		model = glm::scale(model, glm::vec3(3.0f, 3.0f, 4.5f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform1i(glGetUniformLocation(lightingShader.Program, "activeTransparecia"), 1);
+		glUniform4f(glGetUniformLocation(lightingShader.Program, "colorAlpha"), 1.0, 1.0, 1.0, 0.20);
+		CritalRefri.Draw(lightingShader);
+		glDisable(GL_BLEND);
+
+		glEnable(GL_BLEND);
+		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-50.0f, 0.0f, 50.0f));
+		model = glm::scale(model, glm::vec3(2.9f, 2.5f, 2.9f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform1i(glGetUniformLocation(lightingShader.Program, "activeTransparecia"), 1);
+		glUniform4f(glGetUniformLocation(lightingShader.Program, "colorAlpha"), 1.0, 1.0, 1.0, 0.45);
+		CafeCristal.Draw(lightingShader);
+		glDisable(GL_BLEND);
+
+		glEnable(GL_BLEND);
+		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-50.15f, 0.0f, 50.0f));
+		model = glm::scale(model, glm::vec3(2.9f, 2.5f, 2.9f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform1i(glGetUniformLocation(lightingShader.Program, "activeTransparecia"), 1);
+		glUniform4f(glGetUniformLocation(lightingShader.Program, "colorAlpha"), 1.0, 1.0, 1.0, 0.40);
+		CafeDoor.Draw(lightingShader);
+		glDisable(GL_BLEND);
+
 		glEnable(GL_BLEND);
 		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 		model = glm::mat4(1);
