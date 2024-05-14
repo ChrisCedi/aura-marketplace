@@ -1,19 +1,19 @@
 ﻿  317097742_PROYECTOFINAL_GPO3.cpp
-C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO3.cpp(303,24): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO3.cpp(1240,90): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO3.cpp(1251,90): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO3.cpp(1266,90): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO3.cpp(1277,90): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO3.cpp(1288,90): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO3.cpp(1300,90): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO3.cpp(1312,90): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
-C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO3.cpp(1321,16): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO3.cpp(1670,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO3.cpp(1671,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO3.cpp(1675,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO3.cpp(1676,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO3.cpp(1678,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO3.cpp(1679,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO3.cpp(304,24): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO3.cpp(1241,90): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO3.cpp(1252,90): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO3.cpp(1267,90): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO3.cpp(1278,90): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO3.cpp(1289,90): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO3.cpp(1301,90): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO3.cpp(1313,90): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO3.cpp(1322,16): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO3.cpp(1699,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO3.cpp(1700,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO3.cpp(1704,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO3.cpp(1705,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO3.cpp(1707,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\chris\Documents\proyectoCompuGrafica\aura-marketplace\ProyectoFinal\317097742_PROYECTOFINAL_GPO3.cpp(1708,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
 LINK : warning LNK4098: la biblioteca predeterminada'MSVCRT' entra en conflicto con otras bibliotecas; use la biblioteca /NODEFAULTLIB:biblioteca
 soil2-debug.lib(etc1_utils.obj) : warning LNK4099: no se encontró PDB '' con 'soil2-debug.lib(etc1_utils.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
 soil2-debug.lib(image_DXT.obj) : warning LNK4099: no se encontró PDB '' con 'soil2-debug.lib(image_DXT.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración

@@ -82,7 +82,8 @@ glm::vec3 lightDron = glm::vec3(0);
 glm::vec3 lightColorDron;
 //variables cafeteria
 bool openCafe = false;
-float puertaCafeValue = 0.0f;
+float puertaCafeValue = 50.0f;
+string flagDoorCafe = "open";
 
 
 // Positions of the point lights
@@ -1281,7 +1282,7 @@ int main()
 		glEnable(GL_BLEND);
 		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(-50.15f, 0.0f, 50.0f));
+		model = glm::translate(model, glm::vec3(-50.15f, 0.0f, puertaCafeValue));
 		model = glm::scale(model, glm::vec3(2.9f, 2.5f, 2.9f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform1i(glGetUniformLocation(lightingShader.Program, "activeTransparecia"), 1);
@@ -1515,8 +1516,30 @@ void DoMovement()
 				openDoors = false;
 			}
 		}
+
 	}
 
+	if (openCafe)
+	{
+		if (flagDoorCafe == "open")
+		{
+			puertaCafeValue -= 0.1f;
+			if (puertaCafeValue <= 46.0f)
+			{
+				flagDoorCafe = "close";
+				openCafe = false;  
+			}
+		}
+		else if (flagDoorCafe == "close")
+		{
+			puertaCafeValue += 0.1f;
+			if (puertaCafeValue >= 50.0f)
+			{
+				flagDoorCafe = "open";
+				openCafe = false;  
+			}
+		}
+	}
 
 	
 
@@ -1557,6 +1580,8 @@ void FlyDron()
 			lightDron = glm::vec3(0.0f, 0.0f, 0.0f);
 		}
 	}
+
+
 
 }
 
@@ -1660,6 +1685,10 @@ void KeyCallback(GLFWwindow *window, int key, int scancode, int action, int mode
 	}
 	if (keys[GLFW_KEY_F]) {
 		activeDron = !activeDron;
+	}
+
+	if (keys[GLFW_KEY_R]) {
+		openCafe = !openCafe;
 	}
 }
 
