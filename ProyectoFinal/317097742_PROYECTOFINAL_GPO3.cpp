@@ -36,7 +36,7 @@ const GLuint WIDTH = 900, HEIGHT = 600;
 int SCREEN_WIDTH, SCREEN_HEIGHT;
 
 // Camera
-Camera  camera(glm::vec3(0.0f, 3.5f, 50.0f));
+Camera  camera(glm::vec3(0.0f, 3.5f, 100.0f));
 GLfloat lastX = WIDTH / 2.0;
 GLfloat lastY = HEIGHT / 2.0;
 bool keys[1024];
@@ -252,10 +252,22 @@ int main()
 	Model Postres((char*)"Models/cafeteria/refri/refri.obj");
 	Model CritalRefri((char*)"Models/cafeteria/refri/refriCristal/refriCristal.obj");
 
+	//gameStore
+	Model GameStore((char*)"Models/gameStore/gameStore.obj");
+	Model GameScreen((char*)"Models/gameStore/screen/screen.obj");
+	Model XboxStan((char*)"Models/gameStore/xboxStan/xboxStan.obj");
+	Model XboxStanX((char*)"Models/gameStore/xboxStanX/xboxStanX.obj");
+	Model XboxStanX2((char*)"Models/gameStore/xboxStanX2/xboxStanX2.obj");
 
 	//exteriores
 	Model FloorExterior((char*)"Models/floorExterior/floorExterior.obj");
+	Model FloorCenter((char*)"Models/floorCenter/floorCenter.obj");
 	Model TreeExterior((char*)"Models/treeExterior/TreeExterior.obj");
+	Model Letrero((char*)"Models/letrero/letrero.obj");
+
+	//extras
+	Model Store1((char*)"Models/store1/store1.obj");
+	Model Store2((char*)"Models/store2/store2.obj");
 
 
 	
@@ -484,27 +496,62 @@ int main()
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		Fachada.Draw(lightingShader);
 
-		//cristal cafeteria
+		//cafeteria
 		model = glm::mat4(1);
 		model = glm::translate(model, glm::vec3(-50.0f, 0.0f, 50.0f));
 		model = glm::scale(model, glm::vec3(2.9f, 2.5f, 2.9f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		CafeteriaFachada.Draw(lightingShader);
 
+		//gameStore
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(49.0f, 0.0f, 50.0f));
+		model = glm::scale(model, glm::vec3(2.9f, 2.5f, 2.9f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		GameStore.Draw(lightingShader);
+
 		//---------------------------------------------------------------------------------
 		//---------------------Carga de exteriores-----------------------------------------
 		//---------------------------------------------------------------------------------
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f));
-		model = glm::scale(model, glm::vec3(7.8f, 7.8f, 7.8f));
+		model = glm::translate(model, glm::vec3(0.0f, 0.0f, 10.0f));
+		model = glm::scale(model, glm::vec3(6.8f, 7.8f, 5.8f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		FloorExterior.Draw(lightingShader);
+
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(0.0f, 0.1f, 35.0f));
+		model = glm::scale(model, glm::vec3(3.8f, 1.0f, 3.8f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		FloorCenter.Draw(lightingShader);
+
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(0.0f, 0.0f, 70.0f));
+		model = glm::scale(model, glm::vec3(4.8f, 4.8f, 4.8f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		Letrero.Draw(lightingShader);
+		//---------------------------------------------------------------------------------
+		//---------------------Tiendas extras----------------------------------------------
+		//---------------------------------------------------------------------------------
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-34.0f, 0.0f, 16.0f));
+		model = glm::rotate(model, glm::radians(-225.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(4.8f, 4.8f, 4.8f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		Store1.Draw(lightingShader);
+
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(34.0f, 0.0f, 16.0f));
+		model = glm::rotate(model, glm::radians(45.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(4.8f, 4.8f, 4.8f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		Store2.Draw(lightingShader);
 
 		//arboles---------------------------------------------------------
 
 		//derechos
-		// Distribución horizontal entre (30, 0, 40) y (40, 0, 40)
-		for (float x = 10.0f; x <= 70.0f; x += 15.0f) { // Ajusta el incremento para más/menos densidad
+		
+		for (float x = 10.0f; x <= 70.0f; x += 20.0f) { 
 			model = glm::mat4(1);
 			model = glm::translate(model, glm::vec3(x, 0.0f, -25.0f));
 			model = glm::scale(model, glm::vec3(5.8f, 6.8f, 5.8f));
@@ -512,7 +559,7 @@ int main()
 			TreeExterior.Draw(lightingShader);
 		}
 	
-		for (float x = -10.0f; x >= -70.0f; x -= 15.0f) { // Ajusta el incremento para más/menos densidad
+		for (float x = -10.0f; x >= -70.0f; x -= 20.0f) { 
 			model = glm::mat4(1);
 			model = glm::translate(model, glm::vec3(x, 0.0f, -25.0f));
 			model = glm::scale(model, glm::vec3(5.8f, 6.8f, 5.8f));
@@ -520,7 +567,7 @@ int main()
 			TreeExterior.Draw(lightingShader);
 		}
 
-		for (float z = 5.0f; z <= 80.0f; z += 15.0f) { // Ajusta el incremento para más/menos densidad
+		for (float z = 5.0f; z <= 70.0f; z += 20.0f) { 
 			model = glm::mat4(1);
 			model = glm::translate(model, glm::vec3(70, 0.0f, z));
 			model = glm::scale(model, glm::vec3(5.8f, 6.8f, 5.8f));
@@ -528,26 +575,13 @@ int main()
 			TreeExterior.Draw(lightingShader);
 		}
 
-		for (float z = 5.0f; z <= 80.0f; z += 15.0f) { // Ajusta el incremento para más/menos densidad
+		for (float z = 5.0f; z <= 70.0f; z += 20.0f) { 
 			model = glm::mat4(1);
 			model = glm::translate(model, glm::vec3(-70, 0.0f, z));
 			model = glm::scale(model, glm::vec3(5.8f, 6.8f, 5.8f));
 			glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 			TreeExterior.Draw(lightingShader);
 		}
-		
-
-	
-
-		
-
-
-		//izquierdos
-		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(-50.0f, 0.0f, -16.0f));
-		//model = glm::scale(model, glm::vec3(7.8f, 7.8f, 7.8f));
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		TreeExterior.Draw(lightingShader);
 
 
 		//---------------------------------------------------------------------------------
@@ -971,6 +1005,56 @@ int main()
 		model = glm::rotate(model, glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		Estante.Draw(lightingShader);
+
+		//---------------------------------------------------------------------------------
+		//---------------------Carga de objetos game store---------------------------------
+		//---------------------------------------------------------------------------------
+
+		//screens
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(58.2f, 7.0f, 42.65f));
+		model = glm::scale(model, glm::vec3(2.0f, 2.0f, 2.5f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		GameScreen.Draw(lightingShader);
+
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(58.2f, 7.0f, 57.65f));
+		model = glm::scale(model, glm::vec3(2.0f, 2.0f, 2.5f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		GameScreen.Draw(lightingShader);
+
+		//mesa de cobro -------------------------------------------------------------------
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(57.0f, 0.0f, 50.0f));
+		model = glm::scale(model, glm::vec3(1.2f, 1.3f, 0.6f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		Table2.Draw(lightingShader);
+
+		// stan de juegos
+
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(52.0f, 0.0f, 43.0f));
+		model = glm::scale(model, glm::vec3(3.2f, 3.3f, 3.6f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		XboxStan.Draw(lightingShader);
+
+			model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(46.3f, 0.0f, 56.0f));
+		model = glm::scale(model, glm::vec3(3.2f, 3.3f, 3.6f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		XboxStanX.Draw(lightingShader);
+
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(52.0f, 0.0f, 56.0f));
+		model = glm::scale(model, glm::vec3(3.2f, 3.3f, 3.6f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		XboxStan.Draw(lightingShader);
+
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(46.3f, 0.0f, 43.0f));
+		model = glm::scale(model, glm::vec3(3.2f, 3.3f, 3.6f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		XboxStanX2.Draw(lightingShader);
 
 		//---------------------------------------------------------------------------------
 		//---------------------Carga de objetos Cafeteria----------------------------------
